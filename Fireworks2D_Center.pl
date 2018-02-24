@@ -79,6 +79,7 @@ sub idle
     if ( $iter < 500 and $iter % 3 == 0 )
     {
         ($len, $ang) = ( 10.0+rand(30.0), -$iter/200.0*6.28 + 1.57  );
+        #($len, $ang) = ( 10.0+rand(30.0), 90.0/360.0*6.28 * 1.0/4.0 - rand(1.0)  );
         $vx = $len * sin( $ang );
         $vy = $len * cos( $ang );
 
