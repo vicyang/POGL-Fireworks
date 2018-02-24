@@ -1,3 +1,8 @@
+=info
+    Auth: 523066680/vicyang
+    Date: 2018-02
+=cut
+
 use Modern::Perl;
 use IO::Handle;
 use List::Util qw/max min/;
@@ -100,7 +105,8 @@ sub init
     glClearAccum(0.0, 0.0, 0.0, 0.0);
     glEnable(GL_DEPTH_TEST);
     glPointSize(4.0);
-    glLineWidth(1.0);
+    glLineWidth(2.0);
+    #glutFullScreen();
 }
 
 sub reshape
