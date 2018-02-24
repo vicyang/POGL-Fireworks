@@ -116,7 +116,7 @@ sub idle
 
         for ( 0 .. $total )
         {
-            ($len, $ang) = ( 20.0, rand(6.28) );
+            ($len, $ang) = ( rand(20.0) , rand(6.28) );
             $vx = $len * sin( $ang );
             $vy = $len * cos( $ang );
             $vz = rand( 20.0 ) - 10.0;
