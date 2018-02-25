@@ -1,3 +1,13 @@
+=info
+    Auth: 523066680/vicyang
+    Date: 2018-02
+
+    半径取值，rand(20.0) 改为 sqrt(rand(1.0)) * 20.0
+    参考文章：
+    http://blog.csdn.net/shakingwaves/article/details/17969025
+    https://thecodeway.com/blog/?p=1138
+=cut
+
 use Modern::Perl;
 use IO::Handle;
 use List::Util qw/max min/;
@@ -31,7 +41,7 @@ BEGIN
 
     for ( 0 .. $total )
     {
-        ($len, $ang) = ( rand(20.0), rand(6.28) );
+        ($len, $ang) = ( sqrt(rand(1.0)) * 20.0 , rand(6.28) );
         $vx = $len * sin( $ang );
         $vy = $len * cos( $ang );
 
@@ -102,7 +112,7 @@ sub idle
         $iny = rand($show_h) - $half_h;
         for ( 0 .. $total )
         {
-            ($len, $ang) = ( rand(20.0), rand(6.28) );
+            ($len, $ang) = ( sqrt(rand(1.0)) * 20.0, rand(6.28) );
             $vx = $len * sin( $ang );
             $vy = $len * cos( $ang );
 
